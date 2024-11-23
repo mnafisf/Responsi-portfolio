@@ -1,0 +1,128 @@
+:root {
+  --background-color: #141428;
+  --primary-color: #00aaff;
+  --button-bg: #0077cc;
+  --button-hover-bg: #005599;
+  --button-text: white;
+  --text-color: white;
+  --card-bg: #1e1e2f;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --border-radius: 8px;
+}
+
+/* Reset dan Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header dan Heading */
+h1, h2 {
+  margin: 0;
+  padding: 20px 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2 span {
+  color: var(--button-bg);
+  font-weight: bold;
+}
+
+/* Tombol */
+button {
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  border: none;
+  color: var(--button-text);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+  background-color: var(--button-bg);
+}
+
+/* Kartu Umum */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: 0 5px 15px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px var(--card-shadow);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}

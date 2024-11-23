@@ -1,0 +1,224 @@
+/* Variabel Tema */
+:root {
+  --primary-color: #00bcd4;
+  --secondary-color: #2c2c44;
+  --background-color: #1a1a2b;
+  --text-color: #e0e0f0;
+  --hover-scale: 1.1;
+  --border-radius: 12px;
+  --input-bg-color: #2d2d3d;
+  --input-border-color: #555;
+  --button-bg-color: #00bcd4;
+  --button-hover-color: #0097a7;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Portfolio Section */
+.portfolio {
+  background: linear-gradient(135deg, var(--background-color), #111);
+  color: var(--text-color);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background effects */
+.portfolio::before,
+.portfolio::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.2), transparent 70%);
+  filter: blur(120px);
+  z-index: 1;
+}
+
+.portfolio::before {
+  top: -50px;
+  left: -60px;
+  width: 350px;
+  height: 350px;
+}
+
+.portfolio::after {
+  bottom: -70px;
+  right: -70px;
+  width: 450px;
+  height: 450px;
+}
+
+/* Section Title */
+.portfolio h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio h2 span {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Grid Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.col-lg-4,
+.col-md-6,
+.col-sm-12 {
+  flex: 1 1 calc(33.333% - 25px);
+  max-width: calc(33.333% - 25px);
+}
+
+@media (max-width: 768px) {
+  .col-lg-4,
+  .col-md-6,
+  .col-sm-12 {
+    flex: 1 1 calc(50% - 25px);
+    max-width: calc(50% - 25px);
+  }
+}
+
+@media (max-width: 480px) {
+  .col-lg-4,
+  .col-md-6,
+  .col-sm-12 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Project Cards */
+.portfolio-item {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-12px) scale(var(--hover-scale));
+  box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+/* Form Layout */
+.form-container {
+  max-width: 650px;
+  margin: 50px auto;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.form-control {
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--input-bg-color);
+  color: white;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .portfolio h2 {
+    font-size: 2.2rem;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}

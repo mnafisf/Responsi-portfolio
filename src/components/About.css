@@ -1,0 +1,160 @@
+/* About Section */
+.about {
+  background: linear-gradient(135deg, #1e1e2f, #000);
+  color: var(--text-color, white);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Gambar Profil */
+.about-image img {
+  width: 55%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.about-image img:hover {
+  transform: scale(1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Teks Deskripsi */
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.about-text h2 span {
+  color: var(--primary-color, #00f0ff);
+  font-weight: bold;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--muted-text-color, #d1d1e0);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.about-text .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color, #00f0ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-out;
+  will-change: transform, background-color;
+}
+
+.about-text .btn:hover {
+  background-color: #008bbf;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-text .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-text .btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Tombol */
+.about-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #00f0ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-out;
+  will-change: transform, background-color;
+}
+
+.btn:hover {
+  background-color: #008bbf;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Gaya untuk tombol "Download CV" */
+.btn-secondary {
+  background-color: #ff6347; /* Warna berbeda untuk membedakan */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #e0533c; /* Warna hover untuk tombol CV */
+}

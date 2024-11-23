@@ -1,0 +1,138 @@
+/* Services Section */
+.services {
+  background: linear-gradient(135deg, #1e1e2f, #000);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.services h2 span {
+  color: var(--primary-color, #00f0ff);
+  font-weight: bold;
+}
+
+/* Grid Layout */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Service Card */
+.service {
+  background-color: var(--card-background, #2a2a40);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+  will-change: transform, background-color, box-shadow;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.service:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.service:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.service:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.service:hover {
+  transform: translateY(-10px) scale(1.05);
+  background-color: var(--hover-background, #373750);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Service Icon */
+.service i {
+  font-size: 2.5rem;
+  color: var(--icon-color, #00f0ff);
+  margin-bottom: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service:hover i {
+  color: var(--icon-hover-color, #008bbf);
+  transform: rotate(10deg);
+}
+
+/* Service Title */
+.service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.service:hover h3 {
+  color: var(--primary-color, #00f0ff);
+}
+
+/* Service Description */
+.service p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted, #d1d1e0);
+}
+
+/* Animasi Fade-In */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .service {
+    padding: 15px;
+  }
+
+  .services-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services h2 {
+    font-size: 1.8rem;
+  }
+
+  .service i {
+    font-size: 1.8rem;
+  }
+
+  .service h3 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+
+  .services-container {
+    gap: 10px;
+  }
+}
