@@ -68,28 +68,6 @@ function Testimonials() {
         <h2>Client Reviews</h2>
         <p className="subtitle">What clients are saying about my work</p>
 
-        {/* Testimonials Grid */}
-        <div className="testimonials-grid">
-          {testimonials.map((testimonial) => (
-            <div className="testimonial-card" key={testimonial.id}>
-              <div className="testimonial-header">
-                <h3>{testimonial.name}</h3>
-              </div>
-              <p className="testimonial-text">{testimonial.review}</p>
-              <div className="rating">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={18}
-                    fill={i < testimonial.rating ? '#FFC107' : 'none'}
-                    stroke={i < testimonial.rating ? '#FFC107' : '#CBD5E0'}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Add Testimonial Form */}
         <form onSubmit={handleSubmit} className="testimonial-form">
           <h3>Add Testimonial</h3>
@@ -126,6 +104,28 @@ function Testimonials() {
           </label>
           <button type="submit">Add Testimonial</button>
         </form>
+
+        {/* Testimonials Grid */}
+        <div className="testimonials-grid">
+          {testimonials.map((testimonial) => (
+            <div className="testimonial-card" key={testimonial.id}>
+              <div className="testimonial-header">
+                <h3>{testimonial.name}</h3>
+              </div>
+              <p className="testimonial-text">{testimonial.review}</p>
+              <div className="rating">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={18}
+                    fill={i < testimonial.rating ? '#FFC107' : 'none'}
+                    stroke={i < testimonial.rating ? '#FFC107' : '#CBD5E0'}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

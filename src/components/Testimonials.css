@@ -1,183 +1,164 @@
 :root {
-    --background-secondary: #1a202c; /* Warna latar belakang bagian */
-    --background-primary: #2d3748; /* Warna kartu */
-    --text-primary: #e2e8f0; /* Warna teks utama */
-    --text-secondary: #a0aec0; /* Warna teks sekunder */
-    --highlight: #00aaff; /* Warna untuk elemen yang mencolok */
-    --button-bg: #0077cc; /* Warna tombol */
-    --button-hover-bg: #0056b3; /* Warna tombol saat hover */
-    --card-shadow: rgba(0, 0, 0, 0.6); /* Bayangan kartu */
-  }
-  
-  /* Testimonials Section */
-  .testimonials {
-    padding: 6rem 4rem;
+    --background-secondary: #1a202c;
+    --background-primary: #2d3748;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --highlight: #00aaff;
+    --button-bg: #0077cc;
+    --button-hover-bg: #0056b3;
+    --card-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 2rem;
     background-color: var(--background-secondary);
     color: var(--text-primary);
-  }
-  
-  .testimonials .container {
-    max-width: 1200px;
+}
+
+.testimonials .container {
+    max-width: 1100px;
     margin: 0 auto;
-  }
-  
-  .testimonials h2 {
-    font-size: 3rem;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
     color: var(--highlight);
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .testimonials .subtitle {
-    text-align: center;
-    color: var(--text-secondary);
-    margin-bottom: 4rem;
-    font-size: 1.2rem;
-  }
-  
-  /* Testimonials Grid */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .testimonial-card {
-    background-color: var(--background-primary);
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-  }
-  
-  .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px var(--card-shadow);
-  }
-  
-  .testimonial-header {
     margin-bottom: 1rem;
-  }
-  
-  .testimonial-header h3 {
-    font-size: 1.2rem;
-    color: var(--highlight);
-    margin-bottom: 0.25rem;
-  }
-  
-  .testimonial-header .company {
-    font-size: 0.9rem;
+}
+
+.testimonials .subtitle {
     color: var(--text-secondary);
-  }
-  
-  .testimonial-text {
-    color: var(--text-primary);
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: auto;
-    flex: 1;
-  }
-  
-  .rating {
-    display: flex;
-    gap: 0.25rem;
-  }
-  
-  /* Form Styling */
-  .testimonial-form {
-    margin-top: 2rem;
-    padding: 2rem;
-    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonial-card {
     background-color: var(--background-primary);
-    box-shadow: 0 4px 6px var(--card-shadow);
-  }
-  
-  .testimonial-form h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--card-shadow);
+}
+
+.testimonial-header h3 {
+    font-size: 1.2rem;
     color: var(--highlight);
-  }
-  
-  .testimonial-form input,
-  .testimonial-form textarea,
-  .testimonial-form select {
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+/* Testimonial Form */
+.testimonial-form {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--background-primary);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.testimonial-form h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--highlight);
+}
+
+.testimonial-form input,
+.testimonial-form textarea,
+.testimonial-form select {
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.75rem;
     border: 1px solid var(--text-secondary);
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 5px;
     background-color: var(--background-secondary);
     color: var(--text-primary);
-  }
-  
-  .testimonial-form textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .testimonial-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-  }
-  
-  .testimonial-form input:focus,
-  .testimonial-form textarea:focus,
-  .testimonial-form select:focus {
-    border-color: var(--highlight);
-    outline: none;
-    box-shadow: 0 0 5px var(--highlight);
-  }
-  
-  .testimonial-form button {
-    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.testimonial-form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.testimonial-form button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
     background-color: var(--button-bg);
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
     cursor: pointer;
-  }
-  
-  .testimonial-form button:hover {
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-form button:hover {
     background-color: var(--button-hover-bg);
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 768px) {
+}
+
+/* Focus States */
+.testimonial-form input:focus,
+.testimonial-form textarea:focus,
+.testimonial-form select:focus {
+    border-color: var(--highlight);
+    outline: none;
+    box-shadow: 0 0 5px var(--highlight);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
     .testimonials {
-      padding: 4rem 2rem;
+        padding: 4rem 1.5rem;
     }
-  
+
     .testimonials h2 {
-      font-size: 2.5rem;
+        font-size: 2rem;
     }
-  
+
     .testimonials-grid {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  
+
     .testimonial-form {
-      padding: 1.5rem;
+        padding: 1.5rem;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .testimonials h2 {
-      font-size: 2rem;
+        font-size: 1.8rem;
     }
-  
-    .testimonials .subtitle {
-      font-size: 1rem;
+
+    .testimonial-form button {
+        font-size: 1rem;
     }
-  
-    .testimonial-card {
-      padding: 1.5rem;
-    }
-  }
-  
+}
